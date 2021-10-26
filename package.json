@@ -1,0 +1,100 @@
+{
+  "name": "use-is-rtl",
+  "version": "1.0.0",
+  "description": "Determine text directionality of document.",
+  "main": "lib/index.js",
+  "files": [
+    "lib/index.js"
+  ],
+  "scripts": {
+    "start": "NODE_ENV=development BABEL_ENV=development node --max_old_space_size=4096 node_modules/.bin/webpack serve --config webpack.demo.js --progress --open",
+    "build": "webpack --config webpack.config.js --mode production",
+    "prepare": "echo 'Building useDarkTheme' && npm run build",
+    "push": "npm publish --access public",
+    "lint": "eslint src --ext .js,.jsx --fix && eslint demo --ext .js,.jsx --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jagonzalr/useIsRtl.git"
+  },
+  "keywords": [
+    "React",
+    "Hooks"
+  ],
+  "author": "Jose Antonio Gonzalez Rodriguez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jagonzalr/useIsRtl/issues"
+  },
+  "homepage": "https://github.com/jagonzalr/useIsRtl#readme",
+  "babel": {
+    "presets": [
+      [
+        "@babel/preset-env",
+        {
+          "useBuiltIns": "entry",
+          "corejs": "3.14"
+        }
+      ],
+      [
+        "@babel/preset-react",
+        {
+          "runtime": "automatic"
+        }
+      ]
+    ],
+    "plugins": [
+      "@babel/plugin-syntax-dynamic-import",
+      "@babel/plugin-transform-runtime"
+    ]
+  },
+  "lint-staged": {
+    "**/*.{js,jsx}": [
+      "npm run --silent lint",
+      "git add"
+    ]
+  },
+  "peerDependencies": {
+    "react": "^16.8.x || ^17.0.x"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.15.8",
+    "@babel/plugin-syntax-dynamic-import": "^7.8.3",
+    "@babel/plugin-transform-runtime": "^7.15.8",
+    "@babel/preset-env": "^7.15.8",
+    "@babel/preset-react": "^7.14.5",
+    "autoprefixer": "^10.3.7",
+    "babel-eslint": "^10.1.0",
+    "babel-loader": "^8.2.3",
+    "case-sensitive-paths-webpack-plugin": "^2.4.0",
+    "core-js": "^3.19.0",
+    "css-loader": "^6.5.0",
+    "eslint": "^7.32.0",
+    "eslint-config-react-app": "^6.0.0",
+    "eslint-loader": "^4.0.2",
+    "eslint-plugin-flowtype": "^8.0.2",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-jest": "^25.2.2",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-react": "^7.26.1",
+    "html-loader": "^3.0.0",
+    "html-webpack-plugin": "^5.5.0",
+    "jest": "^27.3.1",
+    "lint-staged": "^11.2.6",
+    "node-sass": "^6.0.1",
+    "postcss-loader": "^6.2.0",
+    "prettier": "^2.4.1",
+    "pretty-quick": "^3.1.1",
+    "react": "^17.0.2",
+    "react-dev-utils": "^11.0.4",
+    "react-dom": "^17.0.2",
+    "react-hot-loader": "^4.13.0",
+    "sass-loader": "^12.2.0",
+    "style-loader": "^3.3.1",
+    "tailwindcss": "^2.2.17",
+    "webpack": "^5.60.0",
+    "webpack-cli": "^4.9.1",
+    "webpack-dev-server": "^4.3.1",
+    "husky": "^7.0.0"
+  }
+}

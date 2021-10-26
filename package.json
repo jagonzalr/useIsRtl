@@ -9,7 +9,7 @@
   "scripts": {
     "start": "NODE_ENV=development BABEL_ENV=development node --max_old_space_size=4096 node_modules/.bin/webpack serve --config webpack.demo.js --progress --open",
     "build": "webpack --config webpack.config.js --mode production",
-    "prepare": "echo 'Building useDarkTheme' && npm run build",
+    "prepare": "echo 'Building useIsRtl' && npm run build",
     "push": "npm publish --access public",
     "lint": "eslint src --ext .js,.jsx --fix && eslint demo --ext .js,.jsx --fix"
   },

@@ -34,4 +34,4 @@ npm start
 
 ## License
 
-useDarkTheme is [MIT licensed](./LICENSE).
+useIsRtl is [MIT licensed](./LICENSE).
